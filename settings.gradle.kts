@@ -5,5 +5,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "template"
+rootProject.name = "Instagram Design Challenge"
 include(":app")
