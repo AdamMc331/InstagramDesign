@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material3.Divider
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -41,6 +42,36 @@ fun FeedContent(
                     modifier = Modifier
                         .fillMaxWidth(),
                 )
+            }
+
+            item {
+                InstagramStoryRow(
+                    configs = listOf(
+                        InstagramStoryCircle.Config(
+                            profilePhotoRes = R.drawable.paris,
+                            displayName = "Your Story",
+                            showAddButton = true,
+                        ),
+                        InstagramStoryCircle.Config(
+                            profilePhotoRes = R.drawable.paris,
+                            displayName = "Adam",
+                        ),
+                        InstagramStoryCircle.Config(
+                            profilePhotoRes = R.drawable.paris,
+                            displayName = "Adam",
+                        ),
+                        InstagramStoryCircle.Config(
+                            profilePhotoRes = R.drawable.paris,
+                            displayName = "Adam",
+                        ),
+                    ),
+                    modifier = Modifier
+                        .padding(vertical = 16.dp),
+                )
+            }
+
+            item {
+                Divider()
             }
         }
     }
