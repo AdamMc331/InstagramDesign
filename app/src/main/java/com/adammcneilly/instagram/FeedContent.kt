@@ -1,8 +1,10 @@
 package com.adammcneilly.instagram
 
 import android.content.res.Configuration
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
@@ -19,10 +21,23 @@ fun FeedContent(
         LazyColumn(
             modifier = modifier
                 .fillMaxWidth(),
-            contentPadding = PaddingValues(16.dp),
+            contentPadding = PaddingValues(
+                vertical = 16.dp,
+            ),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
             item {
                 InstagramSearchBar(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(
+                            horizontal = 16.dp,
+                        ),
+                )
+            }
+
+            item {
+                InstagramTabRow(
                     modifier = Modifier
                         .fillMaxWidth(),
                 )
