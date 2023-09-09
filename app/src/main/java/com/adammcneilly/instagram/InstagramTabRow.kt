@@ -70,11 +70,12 @@ private fun InstagramTab(
     Tab(
         selected = selected,
         onClick = { /*TODO*/ },
-        modifier = modifier
-            .padding(16.dp),
+        modifier = modifier,
     ) {
         Text(
             text = text,
+            modifier = modifier
+                .padding(16.dp),
         )
     }
 }
